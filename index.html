@@ -3,198 +3,345 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Rong-Ching Chang - Ph.D. Candidate in Computer Science at UC Davis" />
+        <meta name="author" content="Rong-Ching Chang" />
         <title>Rong-Ching Chang</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
+        <style>
+            :root {
+                --accent: #f77f00;
+                --accent-light: #eae2b7;
+                --accent-dark: #003049;
+                --accent-red: #d62828;
+                --accent-gold: #fcbf49;
+                --bg-section: #fafbfc;
+                --bg-card: #fff;
+                --text: #003049;
+                --text-muted: #4a6274;
+                --border: #e5e7eb;
+            }
+            @media (min-width: 768px) {
+                section.resume-section { min-height: auto !important; }
+            }
+            #sideNav { background: var(--accent) !important; }
+            .bg-primary { background-color: var(--accent) !important; }
+            #sideNav .nav-link { color: var(--accent-dark) !important; }
+            #sideNav .nav-link:hover { color: #fff !important; }
+            #sideNav .navbar-brand span.d-block { color: var(--accent-dark) !important; }
+            #sideNav .nav-link.active {
+                background: rgba(255, 255, 255, 0.35) !important;
+                border-radius: 6px;
+                color: var(--accent-dark) !important;
+                font-weight: 800;
+            }
+            .text-primary { color: var(--accent) !important; }
+            a { color: var(--accent); }
+            a:hover { color: var(--accent-dark); }
+            h1, h2, h3 { color: var(--text); }
+            h1 .text-primary { color: var(--accent) !important; }
+            .social-icon { background: var(--accent-dark) !important; }
+            .social-icon:hover { background: var(--accent) !important; }
+            section.resume-section { background: var(--bg-section); }
+            section.resume-section:nth-child(odd) { background: #fff; }
+            .resume-section-content .d-flex {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 1.2rem 1.5rem;
+                transition: box-shadow 0.2s, transform 0.15s;
+            }
+            .resume-section-content .d-flex:hover {
+                box-shadow: 0 4px 12px rgba(0,48,73,0.08);
+                transform: translateY(-1px);
+                border-color: var(--accent-gold);
+            }
+            .pub-section-label {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--accent-dark);
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.4rem;
+                border-bottom: 2px solid var(--accent-gold);
+                background: none;
+                border-radius: 0;
+                padding: 0 0 0.4rem 0;
+            }
+            .pub-section-label:first-of-type { margin-top: 0; }
+            .pub-venue { color: var(--text-muted); font-size: 1.25rem; margin-top: 0.2rem; }
+            .pub-links { margin-top: 0.5rem; }
+            .pub-links a {
+                display: inline-block;
+                margin-right: 0.5rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: var(--accent);
+                text-decoration: none;
+                border: 1px solid var(--accent);
+                border-radius: 20px;
+                padding: 0.2rem 0.7rem;
+                transition: all 0.2s;
+            }
+            .pub-links a:hover { background: var(--accent); color: #fff; }
+            .reviewer-list { columns: 2; list-style: none; padding-left: 0; }
+            .reviewer-list li { padding: 0.3rem 0; }
+            .reviewer-list li::before {
+                content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900;
+                color: var(--accent); margin-right: 0.5rem; font-size: 0.8rem;
+            }
+            @media (max-width: 768px) { .reviewer-list { columns: 1; } }
+            .exp-description { font-size: 1.25rem; color: var(--text-muted); }
+            .resume-section-content .d-flex p { font-size: 1.25rem; }
+            .subheading { color: var(--text-muted) !important; text-transform: none !important; font-size: 1.25rem !important; font-weight: 400 !important; }
+            h3.mb-0 { font-size: 1.65rem; text-transform: none !important; font-weight: 600; }
+            .flex-shrink-0 .text-primary { font-size: 1.25rem !important; }
+            section.resume-section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+            .fa-certificate { color: var(--accent) !important; }
+            hr.m-0 { opacity: 0; }
+        </style>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Rong-Ching Chang</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/photo.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/photo.jpg" alt="Rong-Ching Chang" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">skills</a></li> -->
-
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#service">Service</a></li>
                 </ul>
             </div>
         </nav>
-        <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
+
+            <!-- About -->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Rong-Ching
-                        <span class="text-primary">Chang</span>
-                    </h1>
-
+                    <h1 class="mb-0">Rong-Ching <span class="text-primary">Chang</span></h1>
                     <p></p>
-
-                    <div class="lead mb-5">
-
-                        <a href="mailto:name@email.com">rocchang@ucdavis.edu</a>
-                    </div>
-
-                    <p></p>
-                    <!-- <p class="lead mb-5">I am a Ph.D. student at the University of California, Davis with research interests covering social media data mining (fake accounts, propaganda detection, ideology propagation), graph neural networks, and cross-domain machine learning applications (ICU patient state prediction). My advisors are Prof. Zubair Shafiq and Magdalena Wojcieszak.  </p> -->
-                    <p class="lead mb-5">Rong Ching Chang is a second-year Ph.D. student in Computer Science at the University of California, Davis.  Her advisors are Prof. Zubair Shafiq and Magdalena Wojcieszak. She earned her master’s degree in Computer Science from Tunghai University, Taiwan. She received her BA in Finance from Chung Yuan Christian University, Taiwan. </p>
-                    <br>
-                    <p></p>
-                    <p class="lead mb-5">Rong-Ching’s research area includes auditing recommendation systems, modeling user behavior, video understanding, and classification using large language models, causal inference, graph neural networks, and multimodal inference. One of her goals in video understanding was to identify harmful TikTok challenges, inappropriate or violent videos to protect users and children. Rong Ching has a rich experience in research. She has over 10 publications from peer-reviewed conferences and journals. She was also an invited reviewer for Nature when she was a master’s student. 
-                          </p>
-
-                    <!-- social media icon -->
+                    <div class="lead mb-4"><a href="mailto:rocchang@ucdavis.edu">rocchang@ucdavis.edu</a></div>
+                    <p class="lead mb-5">I am a Ph.D. candidate in Computer Science at the University of California, Davis, advised by <a href="https://www.hciwang.com/" target="_blank" rel="noopener noreferrer">Prof. Hao-Chuan Wang</a>. My research interests lie in Human-AI agent interaction, multi-agent systems, and applied agent systems, spanning fine-tuning, RAG, synthetic data, RL, harness design, automated research, and prompt optimization. I have 15+ publications at top venues including CHI, AAAI, ICWSM, CogSci, KDD, and ICLR.</p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/rong-ching-chang/ target="_blank" rel="noopener noreferrer""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/rong-ching-chang/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/annabechang" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="https://twitter.com/AnnCC12" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
                         <a class="social-icon" href="https://scholar.google.com/citations?user=RGdietoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
-                        <a class="social-icon" href="https://www.dropbox.com/s/g7j31ma0q3h2n9q/Rong-Ching_CV.pdf?dl=0" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i></a>
-
+                        <a class="social-icon" href="assets/Rong-Ching_CV.pdf" target="_blank" rel="noopener noreferrer" title="Download CV"><i class="fas fa-file-alt"></i></a>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- publications-->
+
+            <!-- Education -->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of California, Davis</h3>
+                            <div class="subheading mb-3">Ph.D. in Computer Science</div>
+                            <p>Advisor: Prof. Hao-Chuan Wang<br>Noyce Fellow &middot; GPA: 3.6/4.0</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Sep 2021 &ndash; Sep 2026 (expected)</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Tunghai University, Taiwan</h3>
+                            <div class="subheading mb-3">M.Sc. in Computer Science</div>
+                            <p>Advisor: Prof. Chu-Hsing Lin<br>Honorary Member of Phi Tau Phi Scholastic Honor Society &middot; GPA: 4.0/4.0</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Sep 2019 &ndash; June 2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Chung Yuan Christian University, Taiwan</h3>
+                            <div class="subheading mb-3">B.A. in Finance</div>
+                            <p>Advisor: Prof. Yi-Pei Chen<br>Academic Excellence Award &middot; GPA: 3.9/4.0</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2014 &ndash; June 2017</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Experience -->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Scale AI</h3>
+                            <div class="subheading mb-3">Human Frontier Collective Specialist &ndash; GenAI</div>
+                            <p class="exp-description">Contributing to the next generation of frontier models.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jun 2025 &ndash; Aug 2026</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Industrial Technology Research Institute</h3>
+                            <div class="subheading mb-3">Sponsored Research Collaborator</div>
+                            <p class="exp-description">Built emotional intelligent conversation agent.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jan 2025 &ndash; Sep 2025</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Experian</h3>
+                            <div class="subheading mb-3">Data Scientist</div>
+                            <p class="exp-description">Spearheaded end-to-end design, development, and deployment of product prototypes using advanced multimodal models. Presented to company CEO as foundation for production release.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jun 2024 &ndash; Sep 2024</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CreatorDB</h3>
+                            <div class="subheading mb-3">Data Scientist</div>
+                            <p class="exp-description">Built recommendation systems using LLMs. Developed sponsored content detection for YouTube. Streamlined ML pipeline, consolidating 16 model executions into a single operation.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jun 2023 &ndash; Sep 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Southern California</h3>
+                            <div class="subheading mb-3">Research Intern</div>
+                            <p class="exp-description">Built multilingual misogyny and sexism classifier (22,000+ downloads on Hugging Face). Invented a novel causal inference method for online forum comments.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jun 2022 &ndash; Sep 2022</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Industrial Technology Research Institute</h3>
+                            <div class="subheading mb-3">AI Research Intern, Computational Intelligence Technology</div>
+                            <p class="exp-description">Researched and tested papers focused on AutoML frameworks.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Jan 2020 &ndash; Aug 2020</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Publications -->
             <section class="resume-section" id="publications">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Publications</h2>
 
-
+                    <div class="pub-section-label">Conference Papers</div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0"> Radicalization of Exposure on YouTube: Algorithmic Recommendations or Off-platform Factors?</h3>
-                            <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Zubair Shafiq and Magdalena Wojcieszak</div>
-                            <div class="subheading mb-3"> Under submission </div>
-
-                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> -->
+                            <h3 class="mb-0">From Unilateral Behavioral Tuning to Human-AI Co-Configuration</h3>
+                            <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Hao-Chuan Wang</div>
+                            <div class="pub-venue">Bidirectional Human-AI Alignment Workshop at the CHI Conference on Human Factors in Computing Systems, 2026</div>
+                            <div class="pub-links"><a href="https://bialign-workshop.github.io/2026chi-pdfs/11.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <!-- <div class="flex-shrink-0"><span class="text-primary"><a href=" ">Link</a></span></div> -->
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Convergence, Reciprocity, and Asymmetry: Communication Accommodation Between Large Language Models and Users Across Cultures</h3>
+                            <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Hao-Chuan Wang</div>
+                            <div class="pub-venue">The 39th Annual AAAI Conference on Artificial Intelligence (AAAI), Student Abstract, 2025</div>
+                            <div class="pub-venue">47th Annual Meeting of the Cognitive Science Society (CogSci), 2025</div>
+                            <div class="pub-links"><a href="https://escholarship.org/uc/item/7623w45h" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Polarized Online Discourse on Abortion: Frames and Hostile Expressions among Liberals and Conservatives</h3>
+                            <div class="subheading mb-3">Ashwin Rao, <b>Rong-Ching Chang</b>, Qiankun Zhong, Kristina Lerman, Magdalena Wojcieszak</div>
+                            <div class="pub-venue">The International AAAI Conference on Web and Social Media (ICWSM), 2025</div>
+                            <div class="pub-links"><a href="https://arxiv.org/pdf/2311.16831" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
+                        </div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Feedback Loops and the Chilling Effects in Online Discussions: The Complex Dynamics of Harmful Speech and Negative Emotions</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Jonathan May, Kristina Lerman</div>
-                            <div class="subheading mb-3"> Under submission </div>
-
-                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> -->
+                            <div class="pub-venue">16th International Conference on Social Computing, Behavioral-Cultural Modeling &amp; Prediction and Behavior Representation in Modeling and Simulation (SBP-BRiMS), 2023</div>
+                            <div class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-43129-6_9" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <!-- <div class="flex-shrink-0"><span class="text-primary"><a href=" ">Link</a></span></div> -->
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Anger Breeds Controversy: Analyzing Controversy and Emotions on Reddit</h3>
+                            <div class="subheading mb-3">Kai Chen, Zihao He, <b>Rong-Ching Chang</b>, Jonathan May, Kristina Lerman</div>
+                            <div class="pub-venue">16th International Conference on Social Computing, Behavioral-Cultural Modeling &amp; Prediction and Behavior Representation in Modeling and Simulation (SBP-BRiMS), 2023</div>
+                            <div class="pub-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-43129-6_5" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
+                        </div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">#RoeOverturned: Twitter Dataset on the Abortion Rights Controversy</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Ashwin Rao, Qiankun Zhong, Magdalena Wojcieszak, Kristina Lerman</div>
-                            <div class="subheading mb-3"> ICWSM, 2023. https://arxiv.org/pdf/2302.01439.pdf</div>
-
-                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> -->
+                            <div class="pub-venue">The International AAAI Conference on Web and Social Media (ICWSM), 2023</div>
+                            <div class="pub-links"><a href="https://arxiv.org/pdf/2302.01439.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://arxiv.org/pdf/2302.01439.pdf">Link</a></span></div>
-                    </div>
-
-
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Anger Breeds Controversy: Analyzing Controversy and Emotions on Reddit</h3>
-                            <div class="subheading mb-3">Kai Chen, Zihao He, <b>Rong-Ching Chang</b>, Jonathan May, Kristina Lerman</div>
-                            <div class="subheading mb-3"> Under submission https://arxiv.org/abs/2106.07544</div>
-
-                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://arxiv.org/abs/2106.07544">Link</a></span></div>
-                    </div>
-
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Entropy-Based Time Window Features Extraction for Machine Learning to Predict Acute Kidney Injury in ICU</h3>
-                            <div class="subheading mb-3">Chun-Te Huang, <b>Rong-Ching Chang</b>, Yi-Lu Tsai, Kai-Chih Pai, Tsai-Jung Wang, Chia-Tien Hsu, Cheng-Hsu Chen, Chien-Chung Huang, Min-Shian Wang, Lun-Chi Chen, Ruey-Kai Sheu, Chieh-Liang Wu, Chun-Ming Lai</div>
-                            <div class="subheading mb-3">Applied Sciences. 2021; 11(14):6364. https://doi.org/10.3390/app11146364</div>
-
-                            <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p> -->
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://www.mdpi.com/2076-3417/11/14/6364/htm">Link</a></span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Dataset of Propaganda Techniques of the State-Sponsored Information Operation of the People’s Republic of China</h3>
+                            <h3 class="mb-0">Dataset of Propaganda Techniques of the State-Sponsored Information Operation of the People's Republic of China</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Chun-Ming Lai, Kai-Lai Chang, Chu-Hsing Lin</div>
-                            <div class="subheading mb-3">Misinformation and Misbehavior Mining on the Web with International Conference on Knowledge Discovery & Data Mining (KDD) 2021</div>
-
-                            <!-- <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p> -->
+                            <div class="pub-venue">Misinformation and Misbehavior Mining on the Web with International Conference on Knowledge Discovery &amp; Data Mining (KDD), 2021</div>
+                            <div class="pub-links"><a href="https://arxiv.org/abs/2106.07544" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://arxiv.org/abs/2106.07544">Link</a></span></div>
                     </div>
+
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Online Sentiment And Post Reactions On Facebook: Leading Indicator For State-Level Covid-19 Confirmed Cases</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Chun-Ming Lai, Chu-Hsing Lin, Kai-Chih Pai</div>
-                            <div class="subheading mb-3">AI for Public Health workshop at the International Conference on Learning Representations (ICLR), 2021</div>
-
-                            <!-- <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> -->
+                            <div class="pub-venue">AI for Public Health Workshop at ICLR, 2021</div>
+                            <div class="pub-links"><a href="https://aiforpublichealth.github.io/papers/ICLR-AI4PH_paper_7.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://aiforpublichealth.github.io/papers/ICLR-AI4PH_paper_7.pdf">Link</a></span></div>
                     </div>
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Online Sentiment on Facebook: a Leading Indicator for State-Level Covid-19 Confirm Cases</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Chu-Hsing Lin, Chun-Ming Lai, Kai-Chih Pai</div>
-                            <div class="subheading mb-3">International Conference On Information Technologies and Practices, 2021</div>
-
-                            <!-- <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p> -->
+                            <div class="pub-venue">International Conference on Information Technologies and Practices, 2021</div>
                         </div>
-                        <!-- <div class="flex-shrink-0"><span class="text-primary"><a href="https://aiforpublichealth.github.io/papers/ICLR-AI4PH_paper_7.pdf">Link</a></span></div> -->
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Detecting Propaganda on the Sentence Level during the COVID-19 Pandemic</h3>
                             <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Chu-Hsing Lin</div>
-                            <div class="subheading mb-3">Cryptology and Information Security Conference (CISC), 2020.</div>
-                            <!-- <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> -->
+                            <div class="pub-venue">Cryptology and Information Security Conference (CISC), 2020</div>
+                            <div class="pub-links"><a href="https://arxiv.org/pdf/2108.12269" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://arxiv.org/pdf/2108.12269">Link</a></span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Pandemic Response and Crisis Informatics: An Imperative for Public Health Messaging</h3>
-                            <div class="subheading mb-3">Chun-Ming Lai, Yi-Chen Liu,<b>Rong-Ching Chang</b>, Jon W. Chapman and Chu-Hsing Lin</div>
-                            <div class="subheading mb-3">International Computer Symposium (ICS), 2020, pp. 570-575, doi: 10.1109/ICS51289.2020.00116.</div>
-                            <!-- <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> -->
+                            <div class="subheading mb-3">Chun-Ming Lai, Yi-Chen Liu, <b>Rong-Ching Chang</b>, Jon W. Chapman, Chu-Hsing Lin</div>
+                            <div class="pub-venue">International Computer Symposium (ICS), 2020</div>
+                            <div class="pub-links"><a href="https://doi.org/10.1109/ICS51289.2020.00116" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"><a href="https://ieeexplore.ieee.org/abstract/document/9359088">Link</a></span></div>
                     </div>
 
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Leveraging Top Participants Networks Topology to Identify Suspiciously Manipulated Posts</h3>
                             <div class="subheading mb-3">Chun-Ming Lai, Huan-Chieh Tseng, <b>Rong-Ching Chang</b>, Tzer-Shyong Chen, Kai-Chih Pai</div>
-                            <div class="subheading mb-3">National Conference on Science and Technology of National Defense. 2020.</div>
+                            <div class="pub-venue">National Conference on Science and Technology of National Defense, 2020</div>
                         </div>
                     </div>
 
@@ -202,7 +349,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">An Attribute-based Encryption for Cloud Medical Data Sharing and Its Implementation</h3>
                             <div class="subheading mb-3">Chu-Hsing Lin, Chu-I Wu, Chia-Yuan Cheng, <b>Rong-Ching Chang</b></div>
-                            <div class="subheading mb-3">The Symposium on Digital Life Technologies 2020 (DLT 2020).</div>
+                            <div class="pub-venue">The Symposium on Digital Life Technologies (DLT), 2020</div>
                         </div>
                     </div>
 
@@ -210,198 +357,81 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Unconnected searchable encryption and implementation for cloud medical record services</h3>
                             <div class="subheading mb-3">Chu-Hsing Lin, Yuan-Xiang Chi, Xuan-Jie Wang, <b>Rong-Ching Chang</b></div>
-                            <div class="subheading mb-3">The Symposium on Digital Life Technologies 2020 (DLT 2020).</div>
+                            <div class="pub-venue">The Symposium on Digital Life Technologies (DLT), 2020</div>
                         </div>
                     </div>
 
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <div class="pub-section-label">Journal Papers</div>
+
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">University of California, Davis, CA, US</h3>
-                            <div class="subheading mb-3">Ph.D in Computer Science</div>
-                            <div class="subheading mb-3">Advisor: Prof. Zubair Shafiq, and Magdalena Wojcieszak</div>
-                            <!-- <p>GPA: NA</p> -->
+                            <h3 class="mb-0">Political content and news are polarized but other content is not in YouTube watch histories</h3>
+                            <div class="subheading mb-3">Magdalena Wojcieszak, <b>Rong-Ching Chang</b>, Ericka Menchen-Trevino</div>
+                            <div class="pub-venue">Journal of Quantitative Description: Digital Media, 2023</div>
+                            <div class="pub-links"><a href="https://journalqd.org/article/view/4114" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Sep 2021 - Present</span></div>
                     </div>
 
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Tunghai University, Taiwan</h3>
-                            <div class="subheading mb-3">M.Sc. in Computer Science</div>
-                            <div class="subheading mb-3">Advisor: Prof. Chu-Hsing Lin</div>
-                            <p>GPA: 3.98/4.30</p>
+                            <h3 class="mb-0">Entropy-Based Time Window Features Extraction for Machine Learning to Predict Acute Kidney Injury in ICU</h3>
+                            <div class="subheading mb-3">Chun-Te Huang, <b>Rong-Ching Chang</b>, Yi-Lu Tsai, Kai-Chih Pai, Tsai-Jung Wang, Chia-Tien Hsu, Cheng-Hsu Chen, Chien-Chung Huang, Min-Shian Wang, Lun-Chi Chen, Ruey-Kai Sheu, Chieh-Liang Wu, Chun-Ming Lai</div>
+                            <div class="pub-venue">Applied Sciences, 2021</div>
+                            <div class="pub-links"><a href="https://doi.org/10.3390/app11146364" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Sep 2019 - June 2021</span></div>
                     </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Chung Yuan Christian University, Taiwan</h3>
-                        <div class="subheading mb-3">B.A., in Finance</div>
-                        <div class="subheading mb-3">Advisor: Prof. Yi-Pei Chen</div>
-                        <p>GPA: 3.88/4.00</p>
+                    <div class="pub-section-label">Non-Archival Papers</div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CommunityKG-RAG: Leveraging Community Structures in Knowledge Graphs for Advanced Retrieval-Augmented Generation in Fact-Checking</h3>
+                            <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Jiawei Zhang</div>
+                            <div class="pub-links"><a href="https://arxiv.org/abs/2408.08535" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> Paper</a></div>
+                        </div>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Sep 2014 - June 2017</span></div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Exposure to Congenial and Problematic Videos on YouTube: Algorithmic Recommendations or Off-Platform Factors?</h3>
+                            <div class="subheading mb-3"><b>Rong-Ching Chang</b>, Magdalena Wojcieszak</div>
+                        </div>
+                    </div>
+
                 </div>
-
-
-
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">Middle Tennessee State University, TN, US</h3>
-                    <div class="subheading mb-3">International Exchange Program</div>
-                    <!-- <div>Advisor: Prof. Yi-Pei Chen</div> -->
-                    <p>GPA: 3.63/4.00</p>
-                </div>
-                <div class="flex-shrink-0"><span class="text-primary">Sep 2015 - June 2016</span></div>
-            </div>
-        </div>
-        </div>
-
-        </div>
-
             </section>
             <hr class="m-0" />
-            <!-- skills-->
-            <!-- <section class="resume-section" id="skills">
+
+            <!-- Service -->
+            <section class="resume-section" id="service">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    <h2 class="mb-5">Service</h2>
+                    <div class="subheading mb-3">Reviewer for Journals &amp; Conferences</div>
+                    <ul class="reviewer-list">
+                        <li>ACM CHI, 2025 &amp; 2026</li>
+                        <li>ACM CSCW, 2024 &amp; 2025</li>
+                        <li>ICWSM, 2025</li>
+                        <li>ACL Rolling Review, 2024</li>
+                        <li>IEEE/ACM ASONAM, 2023 &amp; 2024</li>
+                        <li>Scientific Report (Nature), 2021</li>
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
+                    <div class="subheading mb-3 mt-4">Media Mentions</div>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
+                        <li><span class="fa-li"><i class="fas fa-newspaper"></i></span><a href="https://www.bloomberg.com/news/articles/2022-12-07/openai-chatbot-so-good-it-can-fool-humans-even-when-it-s-wrong" target="_blank" rel="noopener noreferrer">"OpenAI Chatbot So Good It Can Fool Humans, Even When It's Wrong."</a> Bloomberg (2022).</li>
+                        <li><span class="fa-li"><i class="fas fa-newspaper"></i></span><a href="https://engineering.ucdavis.edu/news/good-vs-bad-ai" target="_blank" rel="noopener noreferrer">"Good AI vs. Bad AI."</a> Engineering Progress, UC Davis (2022).</li>
                     </ul>
-                </div>
-            </section>
-            <hr class="m-0" /> -->
-            <!-- experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Information Sciences Institute, University of Southern California</h3>
-                            <div class="subheading mb-3">AI Research Intern</div>
-                            <p>Multilingual misogyny detection. Userbehavior in toxic comment and discussion modeling.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Jan 2022 - Sep 2022</span></div>
-                    </div>
-
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Industrial Technology Research Institute, Taiwan</h3>
-                            <div class="subheading mb-3">AI Research Intern, Computational Intelligence Technology</div>
-                            <p>Researched and tested papers focused on AutoML frameworks, automatic forecasting of time
-series, global supply chain management, inventory management</p>
-                            <p>Tested AutoML packages including AutoKeras, Hyperas with docker, GPU, Tensorflow and
- Pytorch on various tasks.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Jan 2020 - Aug 2020</span></div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Doctor Diet Inc., TN, US</h3>
-                            <div class="subheading mb-3">Finance Manager Intern</div>
-                            <p>Developed semi-automated system for daily sales statements, cash flow tracking for 14 clinics</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2016 - Sep 2016</span></div>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <hr class="m-0" />
-            <!-- Awards-->
-            <!-- <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <div class="subheading mb-3 mt-4">Certificates</div>
                     <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li>
+                        <li><span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>Certificate of Appreciation for Exceptional Mentorship, Project Tyra, Fulbright Taiwan (2023, 2025)</li>
+                        <li><span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>ACM-W Chapter Winter School on Fairness in AI</li>
+                        <li><span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>Nvidia: Combining Data Types through an Image Captioning Project</li>
+                        <li><span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>Microsoft Certified: Azure AI Fundamentals</li>
                     </ul>
                 </div>
-            </section> -->
+            </section>
+
         </div>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
